@@ -1,0 +1,7 @@
+['give','get','till','there','nothing','can','victory','more','today','will',
+'here','way','people','moment','like',
+'double','class','expert','serial','cricketer','captain','politician','artist','sir','information',
+'problem','channel','phone','crore','desk','dance','family','trophy','army','reply',
+'reservation','romantic','uncle','song','list','server','bank','film',
+'spelling','cake','computer','typing','audition','fat','plate','certificate','bomb','prediction',
+'star','joke','production','mobile']

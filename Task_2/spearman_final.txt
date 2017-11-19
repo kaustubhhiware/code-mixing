@@ -1,0 +1,91 @@
+celeb word size: 203
+followers word size: 1804
+
+
+utr celeb top 10													Rank in followers
+
+{ 'memo' :  { 'en' :1,  'hi' : 0, 'utr': 1.0} },                      	-
+{ 'powder' :  { 'en' :1,  'hi' : 0, 'utr': 1.0} },  					-
+{ 'spelling' :  { 'en' :1,  'hi' : 0, 'utr': 1.0} }, 					138 
+{ 'muscle' :  { 'en' :1,  'hi' : 0, 'utr': 1.0} }, 						-
+{ 'juice' :  { 'en' :1,  'hi' : 0, 'utr': 1.0} }, 						-
+{ 'logo' :  { 'en' :4,  'hi' : 0, 'utr': 0.75} }, 				 		3
+{ 'hat' :  { 'en' :2,  'hi' : 0, 'utr': 0.5} }, 				 		145
+{ 'bay' :  { 'en' :2,  'hi' : 0, 'utr': 0.5} }, 				 		469
+{ 'trail' :  { 'en' :2,  'hi' : 0, 'utr': 0.5} }, 					   	230
+{ 'leather' :  { 'en' :2,  'hi' : 0, 'utr': 0.5} }, 					-
+
+
+
+upr celeb top 10 
+
+{ 'cleaner' :  { 'en' :1,  'hi' : 1, 'upr': 1.0} }, 					-
+{ 'memo' :  { 'en' :1,  'hi' : 1, 'upr': 1.0} }, 						-
+{ 'spelling' :  { 'en' :1,  'hi' : 1, 'upr': 1.0} }, 				 	188
+{ 'muscle' :  { 'en' :1,  'hi' : 1, 'upr': 1.0} }, 						-
+{ 'plate' :  { 'en' :1,  'hi' : 1, 'upr': 1.0} }, 				 		572
+{ 'leather' :  { 'en' :2,  'hi' : 1, 'upr': 0.5} }, 					-
+{ 'powder' :  { 'en' :2,  'hi' : 1, 'upr': 0.5} },      				-
+{ 'gutter' :  { 'en' :2,  'hi' : 1, 'upr': 0.5} }, 				 		360
+{ 'juice' :  { 'en' :2,  'hi' : 1, 'upr': 0.5} }, 				 		240
+{ 'keyboard' :  { 'en' :2,  'hi' : 1, 'upr': 0.5} },                    -
+
+
+
+size 1000
+Jacard Index 0.10214168039538715
+
+utr-Spearman(cor=0.35172350372997413, pvalue=0.00035706721494386704)
+
+upr-Spearman(cor=0.43787936104334851, pvalue=9.0953034711990523e-06)
+
+
+
+
+size 500
+Jacard Index 0.10214168039538715
+
+utr-Spearman(cor=0.41175544208837644, pvalue=0.0032874588878337562)
+
+upr-Spearman(cor=0.3879474469746641, pvalue=0.0077216936063476804)
+
+
+size 400
+Jacard Index 0.10214168039538715
+
+utr-Spearman(cor=0.49609187022095452, pvalue=0.00097172512126674697)
+
+upr-Spearman(cor=0.4390659275537091, pvalue=0.010579635252299048)
+
+
+
+size 300
+Jacard Index 0.10214168039538715
+
+utr-Spearman(cor=0.48766658988151712, pvalue=0.0062648537636031659)
+
+upr-Spearman(cor=0.44454668289972066, pvalue=0.020166424921227458)
+
+
+size 200
+Jacard Index 0.10214168039538715
+
+utr-Spearman(cor=0.56010203954218196, pvalue=0.0054442237153450868)
+
+upr-Spearman(cor=0.41713996266227021, pvalue=0.085023864520339859)
+
+
+
+size 100
+Jacard Index 0.10214168039538715
+
+utr-Spearman(cor=0.80396670798890713, pvalue=0.00052928336227078777)
+
+upr-Spearman(cor=0.24725274725274726, pvalue=0.41540511972553817)
+
+size 50
+Jacard Index 0.10214168039538715
+
+utr-SpearmanrResult(correlation=0.62101104036902355, pvalue=0.041436441273795234)
+
+upr-SpearmanrResult(correlation=-1.0, pvalue=0.0)
