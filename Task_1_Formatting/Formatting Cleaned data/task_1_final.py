@@ -13,7 +13,7 @@ def neg(b):
          return 'HI'
      elif(b=='HI'):
            return 'EN'
-
+'''Function to decide whether a tweet is code-switched or code-mixed '''
 def classify(a):
         ''' Returns 1 if Code-Switching
             Returns >1 if Code-Mixing'''
@@ -47,6 +47,8 @@ with open('status-clean_tagged.txt') as fh:
     if(len(line1s)>1 and len(line1ss)>1):
      data1.ix[0,'tweetid']=line1ss[1]
      data1.ix[0,'Tweet']=re.sub(r'^\"\n|\"|\n$', '', line1s[1])
+     
+     '''Extracting the named entities from the tweet '''
      chunked=nltk.ne_chunk(nltk.pos_tag(nltk.word_tokenize(p.clean(line1s[1]))))
      ners=[ " ".join(w for w, t in elt) for elt in chunked if isinstance(elt, nltk.Tree) ]
      for thing in ners:
@@ -68,6 +70,11 @@ with open('status-clean_tagged.txt') as fh:
                j=j+1
           j=j+1
     j=0
+
+    '''Determining whether the tweet belongs to a celebrity or not 
+    if isCeleb=1, tweet belongs to celebrity
+    
+    '''
     while(j<len(lis)-4):
           if(lis[j]=='RT'):
                celb=1
@@ -88,6 +95,7 @@ with open('status-clean_tagged.txt') as fh:
      wr=0
      taglist=[]
      words=[]
+    
      for ii in range(3,len(lis)-1,2):
              worddata.loc[wr,'word']=lis[ii]
              words.append(lis[ii])
@@ -108,7 +116,9 @@ with open('status-clean_tagged.txt') as fh:
      elif(Neng==0 and Nhin==0):
             percE=0
             percH=0
-
+          
+     '''Assigning the tweet-tag based on the percentage of english and hindi words '''
+     
      if(percE>0.9):
                data1.ix[0,"Tweet-tag"]='ENGLISH'
      elif(percH>0.9):
@@ -126,6 +136,8 @@ with open('status-clean_tagged.txt') as fh:
          else:
            data1.ix[0,"Tweet-tag"]='OTHER'
      #print(data1["Tweet-tag"][0])
+     
+     ''' Assigning the context-tag(Matrix) based on the tweet-tag of the tweet '''
      if(data1.ix[0,"Tweet-tag"] in ['ENGLISH','CME']):
              for fn in words:
                  worddata.loc[fn,'Matrix']='EN'
@@ -138,6 +150,8 @@ with open('status-clean_tagged.txt') as fh:
      elif(data1.ix[0,"Tweet-tag"] in['CS','OTHER']):
                  for fn in words:
                       worddata.loc[fn,'Matrix']=worddata.loc[fn,'Label']
+                         
+     '''Labelling the Named Entities in the tweets with the 'NE' tag  '''                    
      for t in words:
           if(t in NER):
               worddata.loc[t,'Label']='NE'
@@ -149,11 +163,12 @@ with open('status-clean_tagged.txt') as fh:
     print(i)
     #if(i>1500):
        #break
-
+'''Dividing the data into groups based on the celebrity status '''
 for x in range(0,2):
             dff[x]=data[data['isCeleb']==x]
             dff[x]= dff[x].set_index('tweetid')
             dff[x]= dff[x].reset_index()
+'''Storing the dataframes in the pickle files '''          
 dff[0]=dff[0].drop_duplicates('tweetid') 
 dff[0].to_pickle('NonCelebAll.pkl')
 dff[1]=dff[1].drop_duplicates('tweetid') 
