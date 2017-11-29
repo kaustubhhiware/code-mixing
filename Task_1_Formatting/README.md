@@ -8,7 +8,7 @@ The second line contains the word level tagging of the tweet based on the langua
 Language tagging is done by using the Microsoft language tagger.
 
 ### Output Format
-The data is formatted and stored in the form of dataframe in a pickle file.
+The data is formatted and stored in the form of dataframe in a pickle file.If needed, this dataframe can be simply converted into json format using an inbuilt function.
 
 The dataframe contains the following columns:
 * tweetid    : Contains the id of the tweet
