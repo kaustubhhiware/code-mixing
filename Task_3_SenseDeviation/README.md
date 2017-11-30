@@ -162,6 +162,8 @@ For a sense Hx, if  **cosine(Hx, E$) > cosine(Hx, E)**, it means when an English
 in Hindi context, it is more likely to mean in the sense of Hx.
 
 The code for this is `res1.py` and `res1-union.py`, which outputs `res1.txt` and `res1-union.txt` respectively.
+`res1-union.csv` is the most convenient form of viewing this information, which is also available on 
+the [Google sheet](https://docs.google.com/spreadsheets/d/1Is0Q2JT_B2GADr4Mfa2qEZckEjZrHVAh2v7hDhpFCM4).
 
 ### Vector similarity
 
