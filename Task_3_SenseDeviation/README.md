@@ -71,6 +71,33 @@ Stored these points and plotted using Matplotlib
 
 Reference: https://www.tensorflow.org/tutorials/word2vec and https://radimrehurek.com/gensim/models/word2vec.html 
 
+Files ::: 
+
+ Naive Sm top 500 points were extracted , Code below will plot them and output of those 500 is also below:
+ Code ::    /visualisation naivesm_plots/image_viewer_500_extractor.py
+ top 500 points ::  visualisation%20naivesm_plots/Top500Points_naivesm.txt
+ 
+ For Hindi Word2vec , we extracted around 30000 points and plotted them 
+ Code :: /viz/word_vectors_visualise.py
+ inout :: viz/w2vhindi_points.txt , given at line 40 in the code
+ 
+ 
+ Since we ran tsne and extracted these points, we made a seperate code to plot , if the points are given .
+ Code :: viz/image_viewer.py 
+ Inputs::  You can replace the input file name in the line 6 of this code. 
+           Check out naivesm_points.txt in the same /viz folder for sample input format.
+           
+           
+ There is one more code script , which we used to complete points . 
+ In above files , only the image_viewer and word_vectors_visualise.py will take points as input and plot them .
+ image_viewer_500_extractor.py only takes a subset of points and plots them .
+ But , This script will take the model as input and runs tsne and plots them . So , it will plot complete points. 
+ Since , viewing and extracting them took time , we just ran other versions above .
+ 
+ Code :: viz/social_w2v.py
+ 
+           
+
 
 ## Checking similarity within social-media Dataset
 
