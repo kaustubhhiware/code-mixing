@@ -50,7 +50,7 @@ The above words were found comparing the frequency of an English noun in English
 For each word, we identify the ratio
 ```
             [ F(English, word)   ]
-        log [ ------------------ ]
+        log[ ------------------ ]
             [   F(Hindi, word)   ]
 ```
 
@@ -120,8 +120,38 @@ The organised results can be found on [this Google sheet](https://docs.google.co
 NOTE: The cosine similarity in gensim can be negative. Please refer to 
 [this stackoverflow answer](https://stackoverflow.com/questions/42381902/interpreting-negative-word2vec-similarity-from-gensim).
 
+First we shall transform social media vector for _film$_ and english vector for _film_.
+
+We are trying to analyse 3 kinds of results.
+
 ### Sense similarity
 
+For an English noun E which appears in Hindi context (E$), we consider the possible senses (H1, H2, H3, ..).
+
+For every possible sense, we consider the cosine similarity of (E, H1) and (E$, H1). Using this, we were able
+to find if, for a certain sense, it is closer to E or E$.
+
+For a sense Hx, if  **cosine(Hx, E$) > cosine(Hx, E)**, it means when an English word appears
+in Hindi context, it is more likely to mean in the sense of Hx.
+
+The code for this is `res1.py` and `res1-union.py`, which outputs `res1.txt` and `res1-union.txt` respectively.
+
+### Vector similarity
+
+Now, for each English noun E which appears in Hindi context (E$), we consider the similarity of E and E$.
+If cosine(E, E$) is high, it means that the senses of E and E$ are closer to each other.
+
+This is possible when E does not have multiple senses. Example, _movie_ and _movie$_ will have higher
+cosine similarity than _film_ and _film$_, because movie has very few possible senses, however
+film can mean cinema, strip, photographic film, etc.
+
+The code for vector similarity is `result_cos_sim.py`, the output for which is at `result2-cos-similarity.txt`
+
+### Nearest neighbours
+
+For every English noun E in Hindi context E$, we take its 10 nearest neighbors in the Hindi vectorspace.
+
+The code is at `result_neighbors.py`, which outputs `result3-neighbors.txt`.
 
 
 ## Obtaining frequency specific data (redundant)

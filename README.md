@@ -2,9 +2,6 @@
 
 This repository contains all the codes pertaining to "Code mixing patterns in Celebrities" / "Quantifying Sense Deviation in Twitter". **(Project 16)** by students of **group 6** as a part of Speech & Natural Language Processing course (CS60057), Autumn 2017.
 
-## Big files will be added at the very end to the repository
-## Must also include locations / URL's for download
-
 
 ## Students involved
 
@@ -34,7 +31,7 @@ Referring to the techniques used in [Hamilton’s (2016): Diachronic Word Embedd
 Further details are mentioned in [Task_3_SenseDeviation](Task_3_SenseDeviation).
 
 The results for each part are mentioned in the corresponding task. For a more comprehensive study of results, 
-please refer to [Group6_report.pdf](Group6_report.pdf.
+please refer to [Group6_report.pdf](Group6_report.pdf).
 
 
 ## Report and Slides
