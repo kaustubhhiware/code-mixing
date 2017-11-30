@@ -3,6 +3,12 @@ from scipy.spatial import procrustes
 from gensim import models
 import pickle
 
+## Variation for social media and English
+##
+## Lines within ******************** are commented alternatively
+## for English  / social-media. Total 3 alternations.
+##
+
 def procrustes(X, Y, scaling=True, reflection='best'):
     """
     A port of MATLAB's `procrustes` function to Numpy.
@@ -116,14 +122,22 @@ def procrustes(X, Y, scaling=True, reflection='best'):
 
 # Translation data: Dict w/ english keys and hindi meanings as vals
 print( "loading translation data")
+
+# ********************
 pkl_file = open('Manual_Tagging/SM2HIdict-train.pkl', 'rb')
+# pkl_file = open('Eng2Hin/EN2HIdict-trimmed.pkl', 'rb')
+# ********************
+
 trans = pickle.load(pkl_file)
 # print( "loaded")
 
 # English wv model
-print( "loading English word2vec")
+# ********************
+print( "loading Social media word2vec")
 e_wv = models.Word2Vec.load("complex-sm-norm")
+# print( "loading English word2vec")
 # e_wv = models.KeyedVectors.load_word2vec_format('G.bin', binary=True)
+# ********************
 
 # Hindi wv model
 print( "loading Hindi word2vec")
@@ -160,9 +174,13 @@ print( len(mat2))
 print( "Calling Procrustes")
 W = procrustes(mat1, mat2, scaling=False, reflection=False)
 
-output1 = open('W-SM-train-k.pkl', 'wb')
-pickle.dump(W, output1)
-output1.close()
+# ********************
+output = open('W-SM-train.pkl','wb')
+# output = open('W-EN-train.pkl', 'wb')
+# ********************
+
+pickle.dump(W, output)
+output.close()
 
 print( W)
 print(len(W))

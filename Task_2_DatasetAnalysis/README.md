@@ -1,4 +1,5 @@
 Contributor  : Karthik 
+NOTE: Celebrity1.txt can be downloaded from [google drive](https://drive.google.com/open?id=1-hNpevHej4qwXsrBuYjMCsVjXztmOLck).
 
               A word in some language , is said to be borrowed by Language2 , if it is used as a native language word
               instead of using the native language meaning .

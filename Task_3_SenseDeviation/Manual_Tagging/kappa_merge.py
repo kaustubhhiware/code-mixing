@@ -14,14 +14,14 @@ words = ['thing', 'way', 'woman', 'press', 'wrong', 'well','matter', 'reason',
 	Get intersection of two results given by the users, find kappa -value from it.
 '''
 
-with open('karthik-tags.txt','r') as f:
+with open('user1-tags.txt','r') as f:
 	a = f.readlines()
 
 for i in range(len(a)):
 	a[i] = [y for y in re.split(':|{ |,| |}|\n',a[i]) if y]
 	a[i].append(' ') # add empty value for next step
 
-with open('prithvi-tags.txt','r') as f:
+with open('user2-tags.txt','r') as f:
 	b = f.readlines()
 
 for i in range(len(a)):

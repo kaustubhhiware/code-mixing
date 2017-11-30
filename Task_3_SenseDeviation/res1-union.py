@@ -25,12 +25,12 @@ word_dict_en = pickle.load(pkl_file3)
 pkl_file3.close()
 
 print("loading En transformation matrix")
-pkl_file1 = open('W-EN-train-k.pkl', 'rb')
+pkl_file1 = open('W-EN-train.pkl', 'rb')
 W_en = pickle.load(pkl_file1)
 pkl_file1.close()
 
 print("loading SM transformation matrix")
-pkl_file2 = open('W-SM-train-k.pkl', 'rb')
+pkl_file2 = open('W-SM-train.pkl', 'rb')
 W_sm = pickle.load(pkl_file2)
 pkl_file2.close()
 

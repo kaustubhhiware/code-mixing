@@ -41,3 +41,6 @@ please refer to [Group6_report.pdf](Group6_report.pdf.
 
 Please refer to [Group6__sense_deviation_slides.pdf](Group6__sense_deviation_slides.pdf) for the presentation slides
  and [Group6_report.pdf](Group6_report.pdf) for the report.
+
+NOTE: Due to space restrictions, we could not upload everything on GitHub. All the code and data can 
+also be found on our mentor Jasabanta Patro's server. [in CelebrityCodeMixingTermProject directory]

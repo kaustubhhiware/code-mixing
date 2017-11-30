@@ -20,17 +20,15 @@ word_dict = pickle.load(pkl_file)
 pkl_file.close()
 
 print("loading En transformation matrix")
-pkl_file1 = open('W-EN-train-k.pkl', 'rb')
+pkl_file1 = open('W-EN-train.pkl', 'rb')
 W_en = pickle.load(pkl_file1)
 pkl_file1.close()
 
 print("loading SM transformation matrix")
-pkl_file2 = open('W-SM-train-k.pkl', 'rb')
+pkl_file2 = open('W-SM-train.pkl', 'rb')
 W_sm = pickle.load(pkl_file2)
 pkl_file2.close()
 
-# f = open("res1.csv",'a')
-# writer = csv.writer(f,delimiter=',',quoting=csv.QUOTE_NONE, escapechar='\\')
 cos_diff = {}
 print("worddict is of len",len(word_dict))
 count = 0
@@ -75,7 +73,4 @@ for k, v in word_dict.items():
         cos_diff[k].append((val, diff))
         count += 1
         row.append([val, str(cos_en), str(cos_sm), str(diff)])
-    # writer.writerow(str(row))
     print(row)
-
-# f.close()

@@ -13,7 +13,7 @@ from gensim.models.keyedvectors import KeyedVectors
 # useful indices with $ in them
 # 141, 151, 337, 358, 395, 532, 624, 625, 770, 820, 956
 
-def w2v():
+# def w2v():
 tc, tf = pd.read_pickle('tweets_celeb.pkl'), pd.read_pickle('tweets_follow.pkl')
 t = pd.concat([tc,tf]) # merge all tweets
 corpus = t['word'].values.tolist()
@@ -49,6 +49,7 @@ model.delete_temporary_training_data(replace_word_vectors_with_normalized=True)
 # window => context_size
 # Distance, similarity, ranking
 # model = gensim.models.Word2Vec.load('testmodel')
+model.save('complex-sm')
 
 # see which words end in $, their similarity
 # len(m.wv.vocab)
@@ -57,5 +58,5 @@ for each in model.wv.vocab.keys():
         print(each)
 
 
-if __name__ == '__main__':
-	w2v()
+# if __name__ == '__main__':
+# 	w2v()

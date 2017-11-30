@@ -13,7 +13,7 @@ print( "loading English word2vec")
 e_wv = models.KeyedVectors.load_word2vec_format('G.bin', binary=True)
 
 print( "loading SM word2vec")
-sm_wv = models.Word2Vec.load("complex-sm-norm")
+sm_wv = models.Word2Vec.load("complex-sm")
 
 # ----------------------------------------------------------------------
 
@@ -25,14 +25,12 @@ pkl_file.close()
 # ----------------------------------------------------------------------
 
 print("loading En transformation matrix")
-pkl_file1 = open('W-EN-train-k.pkl', 'rb')
-# pkl_file1 = open('W-EN-updated.pkl', 'rb')
+pkl_file1 = open('W-EN-train.pkl', 'rb')
 W_en = pickle.load(pkl_file1)
 pkl_file1.close()
 
 print("loading SM transformation matrix")
-# pkl_file2 = open('W-SM-updated.pkl', 'rb')
-pkl_file2 = open('W-SM-train-k.pkl', 'rb')
+pkl_file2 = open('W-SM-train.pkl', 'rb')
 W_sm = pickle.load(pkl_file2)
 pkl_file2.close()
 
